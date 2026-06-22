@@ -73,6 +73,7 @@ function renderGallery() {
             <img
                 src="${image.src}"
                 alt="${image.title}"
+                loading="lazy"
                 onclick="openOverlay(${index})">
 
         `;
@@ -92,12 +93,11 @@ function openOverlay(index) {
 
     currentImage = index;
 
-    document
-        .getElementById("overlay")
-        .classList.remove("d-none");
+    document.getElementById("overlay").classList.remove("d-none");
+
+    document.body.classList.add("no-scroll");
 
     updateOverlay();
-
 }
 
 
@@ -107,10 +107,9 @@ function openOverlay(index) {
 
 function closeOverlay() {
 
-    document
-        .getElementById("overlay")
-        .classList.add("d-none");
+    document.getElementById("overlay").classList.add("d-none");
 
+    document.body.classList.remove("no-scroll");
 }
 
 

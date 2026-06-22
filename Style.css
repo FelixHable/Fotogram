@@ -28,7 +28,7 @@ body {
 =========================== */
 
 header {
-    height:90px;
+    height:96px;
     background:#021C27;
     display:flex;
     align-items:center;
@@ -45,6 +45,17 @@ header .logo{
 
 .logo img {
     height: 46px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo p{
+    font-size:30px;
+    font-weight:700;
 }
 
 /* ===========================
@@ -92,6 +103,7 @@ main {
     border-radius:14px;
     transition:.25s;
     cursor:pointer;
+    animation:fadeIn .5s ease both;
 }
 
 .gallery img:hover{
@@ -106,12 +118,16 @@ main {
 =========================== */
 
 footer{
-    height:120px;
-    background:#021C27;
-    border-top:1px solid rgba(255,255,255,.08);
     display:flex;
-    flex-direction:column;
     justify-content:center;
+    align-items:center;
+    padding:24px 60px;
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer-left{
+    display:flex;
     align-items:center;
     gap:12px;
 }
@@ -138,10 +154,32 @@ footer p {
     justify-content: center;
     align-items: center;
     z-index: 999;
+    opacity:0;
+    visibility:hidden;
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
 }
 
-.d-none {
-    display: none;
+.d-none{
+
+display:none;
+}
+
+.overlay.active{
+
+display:flex;
+}
+
+.gallery img{
+
+display:block;
+}
+
+.overlay:not(.d-none){
+
+    opacity:1;
+    visibility:visible;
 }
 
 .overlay-content{
@@ -180,6 +218,8 @@ footer p {
     width:100%;
     max-height:520px;
     object-fit:cover;
+    display:block;
+    margin:auto;
 }
 
 .overlay-footer {
@@ -209,6 +249,10 @@ footer p {
     font-size: 14px;
 }
 
+.no-scroll{
+    overflow:hidden;
+}
+
 @keyframes zoom{
 
     from{
@@ -219,6 +263,26 @@ footer p {
     to{
         transform:scale(1);
         opacity:1;
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
     }
 
 }
