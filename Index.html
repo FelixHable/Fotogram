@@ -73,9 +73,13 @@
                 <h2 id="imageTitle"></h2>
 
                 <button id="closeBtn" class="icon-btn" onclick="closeOverlay()">
-                    <img src="./img/close.png" alt="Close">
-                </button>
 
+                    <img
+                        id="closeIcon"
+                        src="./img/close.png"
+                        alt="Close">
+
+                </button>
             </div>
 
             <img
@@ -86,13 +90,13 @@
 
             <div class="overlay-footer">
 
-                <button class="icon-btn" onclick="previousImage()">
+                <button class="icon-btn-left" onclick="previousImage()">
                     <img src="./img/arrow.png" alt="Previous">
                 </button>
 
                 <span id="counter"></span>
 
-                <button class="icon-btn" onclick="nextImage()">
+                <button class="icon-btn-right" onclick="nextImage()">
                     <img src="./img/arrow.png" alt="Next">
                 </button>
 

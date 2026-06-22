@@ -220,6 +220,7 @@ display:block;
     object-fit:cover;
     display:block;
     margin:auto;
+    padding-bottom:20px;
 }
 
 .overlay-footer {
@@ -229,16 +230,6 @@ display:block;
     gap: 35px;
 }
 
-.overlay-footer button{
-    width:48px;
-    height:48px;
-    border-radius:50%;
-    background:#0B3D56;
-    color:white;
-    border:none;
-    font-size:22px;
-    transition:.2s;
-}
 
 .overlay-footer button:hover{
     background:#1A5D81;
@@ -246,14 +237,14 @@ display:block;
 }
 
 #counter {
-    font-size: 14px;
+    font-size: 24px;
 }
 
 .no-scroll{
     overflow:hidden;
 }
 
-.icon-btn{
+.icon-btn-left{
     width:48px;
     height:48px;
     display:flex;
@@ -266,14 +257,40 @@ display:block;
     transition:.2s;
 }
 
-.icon-btn:hover{
+.icon-btn-right{
+    width:48px;
+    height:48px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    border-radius:50%;
+    transition:.2s;
+}
+
+.icon-btn-left:hover{
+    background:rgba(255,255,255,.08);
+    transform:scale(1.08);
+    transform:rotate(180deg);
+}
+
+.icon-btn-right:hover{
     background:rgba(255,255,255,.08);
     transform:scale(1.08);
 }
 
-.icon-btn img{
-    width:24px;
-    height:24px;
+.icon-btn-left img{
+    width: 48px;
+    height:48px;
+    object-fit:contain;
+    transform:rotate(180deg);
+}
+
+.icon-btn-right img{
+    width:48px;
+    height:48px;
     object-fit:contain;
 }
 

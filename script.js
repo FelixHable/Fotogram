@@ -217,3 +217,21 @@ document
     }
 
 });
+
+const closeIcon = document.getElementById("closeIcon");
+
+closeBtn.addEventListener("mouseenter", () => {
+    closeIcon.src = "./img/close-hover.png";
+});
+
+closeBtn.addEventListener("mouseleave", () => {
+    closeIcon.src = "./img/close.png";
+});
+
+closeBtn.addEventListener("mousedown", () => {
+    closeIcon.src = "./img/close-press.png";
+});
+
+closeBtn.addEventListener("mouseup", () => {
+    closeIcon.src = "./img/close-hover.png";
+});
