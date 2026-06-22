@@ -10,13 +10,7 @@
 
 body {
     font-family: "Raleway", sans-serif;
-    background:
-        linear-gradient(
-            180deg,
-            #021C27 0%,
-            #032A39 40%,
-            #02151D 100%
-        );
+    background:#06171E;
     color: white;
     min-height: 100vh;
     display: flex;
@@ -29,7 +23,7 @@ body {
 
 header {
     height:96px;
-    background:#021C27;
+    background:#09212A;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -117,13 +111,16 @@ main {
    FOOTER
 =========================== */
 
-footer{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:24px 60px;
-    flex-direction:column;
-    gap:12px;
+footer {
+    display: flex;
+    background: #09212A;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 60px 24px 60px;
+    flex-direction: column;
+    gap: 12px;
+    border-top-left-radius: 50% 40px;
+    border-top-right-radius: 50% 40px;
 }
 
 .footer-left{
@@ -183,7 +180,7 @@ display:block;
 }
 
 .overlay-content{
-    background:#042737;
+    background:#09212A;
     width:720px;
     border-radius:20px;
     padding:40px;
