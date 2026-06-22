@@ -4,52 +4,52 @@
 
 const images = [
     {
-        title: "Mountain",
-        src: "./assets/img/mountain.jpg"
+        title: "alaska",
+        src: "./assets/img/alaska.jpg"
     },
     {
-        title: "Beach",
-        src: "./assets/img/beach.jpg"
+        title: "anime",
+        src: "./assets/img/anime.jpg"
     },
     {
-        title: "Forest",
-        src: "./assets/img/forest.jpg"
+        title: "atmosphere",
+        src: "./assets/img/atmosphere.png"
     },
     {
-        title: "City",
-        src: "./assets/img/city.jpg"
+        title: "blue-tit",
+        src: "./assets/img/blue-tit.jpg"
     },
     {
-        title: "Flowers",
-        src: "./assets/img/flowers.jpg"
+        title: "hurricane",
+        src: "./assets/img/hurricane.jpg"
     },
     {
-        title: "Lake",
+        title: "lake",
         src: "./assets/img/lake.jpg"
     },
     {
-        title: "Sky",
-        src: "./assets/img/sky.jpg"
+        title: "moorente",
+        src: "./assets/img/moorente.jpg"
     },
     {
-        title: "Sunset",
-        src: "./assets/img/sunset.jpg"
+        title: "sea",
+        src: "./assets/img/sea.jpg"
     },
     {
-        title: "Bridge",
-        src: "./assets/img/bridge.jpg"
+        title: "snow-bunting",
+        src: "./assets/img/snow-bunting.jpg"
     },
     {
-        title: "Snow",
-        src: "./assets/img/snow.jpg"
+        title: "snow-leopard",
+        src: "./assets/img/snow-leopard.jpg"
     },
     {
-        title: "Road",
-        src: "./assets/img/road.jpg"
+        title: "travel",
+        src: "./assets/img/travel.jpg"
     },
     {
-        title: "Waterfall",
-        src: "./assets/img/waterfall.jpg"
+        title: "winter",
+        src: "./assets/img/winter.jpg"
     }
 ];
 

@@ -9,8 +9,14 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #032332, #00131d);
+    font-family: "Raleway", sans-serif;
+    background:
+        linear-gradient(
+            180deg,
+            #021C27 0%,
+            #032A39 40%,
+            #02151D 100%
+        );
     color: white;
     min-height: 100vh;
 
