@@ -5,51 +5,51 @@
 const images = [
     {
         title: "alaska",
-        src: "./assets/img/alaska.jpg"
+        src: "./img/alaska.jpg"
     },
     {
         title: "anime",
-        src: "./assets/img/anime.jpg"
+        src: "./img/anime.jpg"
     },
     {
         title: "atmosphere",
-        src: "./assets/img/atmosphere.png"
+        src: "./img/atmosphere.png"
     },
     {
         title: "blue-tit",
-        src: "./assets/img/blue-tit.jpg"
+        src: "./img/blue-tit.jpg"
     },
     {
         title: "hurricane",
-        src: "./assets/img/hurricane.jpg"
+        src: "./img/hurricane.jpg"
     },
     {
         title: "lake",
-        src: "./assets/img/lake.jpg"
+        src: "./img/lake.jpg"
     },
     {
         title: "moorente",
-        src: "./assets/img/moorente.jpg"
+        src: "./img/moorente.jpg"
     },
     {
         title: "sea",
-        src: "./assets/img/sea.jpg"
+        src: "./img/sea.jpg"
     },
     {
         title: "snow-bunting",
-        src: "./assets/img/snow-bunting.jpg"
+        src: "./img/snow-bunting.jpg"
     },
     {
         title: "snow-leopard",
-        src: "./assets/img/snow-leopard.jpg"
+        src: "./img/snow-leopard.jpg"
     },
     {
         title: "travel",
-        src: "./assets/img/travel.jpg"
+        src: "./img/travel.jpg"
     },
     {
         title: "winter",
-        src: "./assets/img/winter.jpg"
+        src: "./img/winter.jpg"
     }
 ];
 
