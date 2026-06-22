@@ -4,51 +4,51 @@
 
 const images = [
     {
-        title: "alaska",
+        title: "Alaska",
         src: "./img/alaska.jpg"
     },
     {
-        title: "anime",
+        title: "Anime",
         src: "./img/anime.jpg"
     },
     {
-        title: "atmosphere",
+        title: "Atmosphere",
         src: "./img/atmosphere.png"
     },
     {
-        title: "blue-tit",
+        title: "Blue-tit",
         src: "./img/blue-tit.jpg"
     },
     {
-        title: "hurricane",
+        title: "Hurricane",
         src: "./img/hurricane.jpg"
     },
     {
-        title: "lake",
+        title: "Lake",
         src: "./img/lake.jpg"
     },
     {
-        title: "moorente",
+        title: "Moorente",
         src: "./img/moorente.jpg"
     },
     {
-        title: "sea",
+        title: "Sea",
         src: "./img/sea.jpg"
     },
     {
-        title: "snow-bunting",
+        title: "Snow-bunting",
         src: "./img/snow-bunting.jpg"
     },
     {
-        title: "snow-leopard",
+        title: "Snow-leopard",
         src: "./img/snow-leopard.jpg"
     },
     {
-        title: "travel",
+        title: "Travel",
         src: "./img/travel.jpg"
     },
     {
-        title: "winter",
+        title: "Winter",
         src: "./img/winter.jpg"
     }
 ];
@@ -235,3 +235,25 @@ closeBtn.addEventListener("mousedown", () => {
 closeBtn.addEventListener("mouseup", () => {
     closeIcon.src = "./img/close-hover.png";
 });
+
+
+const prevArrow = document.getElementById("prevArrow");
+const nextArrow = document.getElementById("nextArrow");
+
+function addArrowEffects(arrow) {
+
+    arrow.parentElement.addEventListener("mouseenter", () => {
+        arrow.src = "./img/arrow-hover.png";
+    });
+
+    arrow.parentElement.addEventListener("mouseleave", () => {
+        arrow.src = "./img/arrow.png";
+    });
+
+    arrow.parentElement.addEventListener("mouseup", () => {
+        arrow.src = "./img/arrow-hover.png";
+    });
+}
+
+addArrowEffects(prevArrow);
+addArrowEffects(nextArrow);

@@ -230,12 +230,6 @@ display:block;
     gap: 35px;
 }
 
-
-.overlay-footer button:hover{
-    background:#1A5D81;
-    transform:scale(1.08);
-}
-
 #counter {
     font-size: 24px;
 }
@@ -268,17 +262,6 @@ display:block;
     cursor:pointer;
     border-radius:50%;
     transition:.2s;
-}
-
-.icon-btn-left:hover{
-    background:rgba(255,255,255,.08);
-    transform:scale(1.08);
-    transform:rotate(180deg);
-}
-
-.icon-btn-right:hover{
-    background:rgba(255,255,255,.08);
-    transform:scale(1.08);
 }
 
 .icon-btn-left img{
