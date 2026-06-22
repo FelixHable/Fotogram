@@ -1,113 +1,66 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <title>Fotogram</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Fotogram - Personal Photo Album</title>
     <link rel="stylesheet" href="./Style.css">
 </head>
-
 <body>
 
     <header>
-
         <div class="logo">
-
-            <img src="./img/fotogram.png"
-                 alt="Fotogram Logo">
-                 <p>Fotogram</p>
-
+            <img src="./img/fotogram.png" alt="Fotogram Logo">
+            <p>Fotogram</p>
         </div>
-
     </header>
 
     <main>
-
         <section class="headline">
-
             <h1>Your personal photo album</h1>
-
         </section>
 
-        <section
-            id="gallery"
-            class="gallery">
-
-        </section>
-
+        <section id="gallery" class="gallery" aria-label="Photo Gallery Container"></section>
     </main>
 
     <footer>
-
         <div class="footer-left">
-
-        <img src="./img/Icon.png"
-             alt="Developer Akademie">
-             <span>Developer <br>  Akademie</span>
-
+            <img src="./img/Icon.png" alt="Developer Akademie Logo">
+            <span>Developer <br> Akademie</span>
         </div>
-
-            <p>© 2023 Developer Akademie GmbH</p>
-        
-
+        <p>© 2023 Developer Akademie GmbH</p>
     </footer>
 
-
-    <!-- Overlay -->
-
-    <div
-        id="overlay"
-        class="overlay d-none">
-
+    <div id="overlay" class="overlay d-none" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="imageTitle">
         <div class="overlay-content">
 
             <div class="overlay-header">
-
-                <h2 id="imageTitle"></h2>
-
-                <button id="closeBtn" class="icon-btn" onclick="closeOverlay()">
-
-                    <img
-                        id="closeIcon"
-                        src="./img/close.png"
-                        alt="Close">
-
+                <h2 id="imageTitle">Image Title</h2>
+                <button id="closeBtn" class="icon-btn" onclick="closeOverlay()" aria-label="Close Lightbox View">
+                    <img id="closeIcon" src="./img/close.png" alt="">
                 </button>
             </div>
 
-            <img
-                id="overlayImage"
-                src=""
-                alt="">
-
+            <img id="overlayImage" src="" alt="Expanded preview">
 
             <div class="overlay-footer">
-
-                <button class="icon-btn-left" onclick="previousImage()">
-                    <img id="prevArrow" src="./img/arrow.png" alt="Previous">
+                <button id="prevBtn" class="icon-btn-left" onclick="previousImage()" aria-label="Previous Image">
+                    <img id="prevArrow" src="./img/arrow.png" alt="">
                 </button>
 
-                <span id="counter"></span>
+                <span id="counter" aria-live="polite"></span>
 
-                <button class="icon-btn-right" onclick="nextImage()">
-                    <img id="nextArrow" src="./img/arrow.png" alt="Next">
+                <button id="nextBtn" class="icon-btn-right" onclick="nextImage()" aria-label="Next Image">
+                    <img id="nextArrow" src="./img/arrow.png" alt="">
                 </button>
-
             </div>
 
         </div>
-
     </div>
 
-<script src="./script.js"></script>
-
+    <script src="./script.js"></script>
 </body>
-
 </html>
