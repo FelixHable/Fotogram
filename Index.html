@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fotogram</title>
+
+    <link rel="stylesheet" href="./Style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <img src="./assets/icons/logo.svg"
+                 alt="Fotogram Logo">
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="headline">
+
+            <h1>Your personal photo album</h1>
+
+        </section>
+
+        <section
+            id="gallery"
+            class="gallery">
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <img src="./assets/logo/developer-akademie.svg"
+             alt="Developer Akademie">
+
+        <p>© 2023 Developer Akademie GmbH</p>
+
+    </footer>
+
+
+    <!-- Overlay -->
+
+    <div
+        id="overlay"
+        class="overlay d-none">
+
+        <div class="overlay-content">
+
+            <div class="overlay-header">
+
+                <h2 id="imageTitle"></h2>
+
+                <button
+                    id="closeBtn"
+                    onclick="closeOverlay()">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+            <img
+                id="overlayImage"
+                src=""
+                alt="">
+
+
+            <div class="overlay-footer">
+
+                <button
+                    onclick="previousImage()">
+
+                    ←
+
+                </button>
+
+                <span id="counter"></span>
+
+                <button
+                    onclick="nextImage()">
+
+                    →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="./js/script.js"></script>
+
+</body>
+
+</html>
