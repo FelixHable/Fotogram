@@ -253,6 +253,31 @@ display:block;
     overflow:hidden;
 }
 
+.icon-btn{
+    width:48px;
+    height:48px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    border-radius:50%;
+    transition:.2s;
+}
+
+.icon-btn:hover{
+    background:rgba(255,255,255,.08);
+    transform:scale(1.08);
+}
+
+.icon-btn img{
+    width:24px;
+    height:24px;
+    object-fit:contain;
+}
+
+
 @keyframes zoom{
 
     from{

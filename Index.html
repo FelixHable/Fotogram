@@ -53,7 +53,7 @@
              <span>Developer <br>  Akademie</span>
 
         </div>
-        
+
             <p>© 2023 Developer Akademie GmbH</p>
         
 
@@ -72,12 +72,8 @@
 
                 <h2 id="imageTitle"></h2>
 
-                <button
-                    id="closeBtn"
-                    onclick="closeOverlay()">
-
-                    ✕
-
+                <button id="closeBtn" class="icon-btn" onclick="closeOverlay()">
+                    <img src="./img/close.png" alt="Close">
                 </button>
 
             </div>
@@ -90,20 +86,14 @@
 
             <div class="overlay-footer">
 
-                <button
-                    onclick="previousImage()">
-
-                    ←
-
+                <button class="icon-btn" onclick="previousImage()">
+                    <img src="./img/arrow.png" alt="Previous">
                 </button>
 
                 <span id="counter"></span>
 
-                <button
-                    onclick="nextImage()">
-
-                    →
-
+                <button class="icon-btn" onclick="nextImage()">
+                    <img src="./img/arrow.png" alt="Next">
                 </button>
 
             </div>
