@@ -29,18 +29,32 @@ body {
 =========================== */
 
 header {
-    height: 80px;
+    height:90px;
 
-    background-color: rgba(0, 0, 0, 0.25);
+    background:#021C27;
 
-    display: flex;
-    align-items: center;
+    display:flex;
 
-    padding: 0 64px;
+    align-items:center;
+
+    justify-content:center;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+header .logo{
+
+    width:100%;
+
+    max-width:1200px;
+
+    display:flex;
+
+    align-items:center;
 }
 
 .logo img {
-    height: 40px;
+    height: 46px;
 }
 
 /* ===========================
@@ -65,68 +79,76 @@ main {
 .headline {
     text-align: center;
 
-    margin-bottom: 64px;
+    margin-bottom: 70px;
 }
 
 .headline h1 {
-    font-size: 52px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing:.5px;
 }
 
 /* ===========================
    GALLERY
 =========================== */
 
-.gallery {
+.gallery{
 
-    display: grid;
+    display:grid;
 
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
 
-    gap: 18px;
+    gap:22px;
 }
 
-.gallery img {
+.gallery img{
 
-    width: 100%;
+    width:100%;
 
-    aspect-ratio: 1;
+    aspect-ratio:1;
 
-    object-fit: cover;
+    object-fit:cover;
 
-    border-radius: 12px;
+    border-radius:14px;
 
-    cursor: pointer;
+    transition:.25s;
 
-    transition: 250ms ease;
+    cursor:pointer;
 }
 
-.gallery img:hover {
+.gallery img:hover{
 
-    transform: scale(1.05);
+    transform:scale(1.04);
 
-    box-shadow: 0 0 18px rgba(255,255,255,.25);
+    filter:brightness(1.1);
+
+    box-shadow:
+
+        0 15px 30px rgba(0,0,0,.35);
 }
 
 /* ===========================
    FOOTER
 =========================== */
 
-footer {
+footer{
 
-    height: 120px;
+    height:120px;
 
-    background: rgba(255,255,255,.05);
+    background:#021C27;
 
-    display: flex;
+    border-top:1px solid rgba(255,255,255,.08);
 
-    flex-direction: column;
+    display:flex;
 
-    justify-content: center;
+    flex-direction:column;
 
-    align-items: center;
+    justify-content:center;
 
-    gap: 10px;
+    align-items:center;
+
+    gap:12px;
 }
 
 footer img {
@@ -151,7 +173,9 @@ footer p {
 
     inset: 0;
 
-    background: rgba(0,0,0,.75);
+    backdrop-filter:blur(10px);
+
+    background: rgba(0,0,0,.72);
 
     display: flex;
 
@@ -166,17 +190,17 @@ footer p {
     display: none;
 }
 
-.overlay-content {
+.overlay-content{
 
-    width: 700px;
+    background:#042737;
 
-    max-width: 95%;
+    width:720px;
 
-    background: #012535;
+    border-radius:20px;
 
-    border-radius: 20px;
+    padding:40px;
 
-    padding: 36px;
+    animation:zoom .25s ease;
 }
 
 .overlay-header {
@@ -213,13 +237,15 @@ footer p {
     color: #ff5d5d;
 }
 
-#overlayImage {
+#overlayImage{
 
-    width: 100%;
+    border-radius:15px;
 
-    border-radius: 12px;
+    width:100%;
 
-    margin-bottom: 30px;
+    max-height:520px;
+
+    object-fit:cover;
 }
 
 .overlay-footer {
@@ -233,35 +259,53 @@ footer p {
     gap: 35px;
 }
 
-.overlay-footer button {
+.overlay-footer button{
 
-    width: 44px;
+    width:48px;
 
-    height: 44px;
+    height:48px;
 
-    border-radius: 50%;
+    border-radius:50%;
 
-    border: none;
+    background:#0B3D56;
 
-    background: #102d3d;
+    color:white;
 
-    color: white;
+    border:none;
 
-    font-size: 20px;
+    font-size:22px;
 
-    cursor: pointer;
-
-    transition: .2s;
+    transition:.2s;
 }
 
-.overlay-footer button:hover {
+.overlay-footer button:hover{
 
-    background: #183d52;
+    background:#1A5D81;
+
+    transform:scale(1.08);
 }
 
 #counter {
 
     font-size: 14px;
+}
+
+@keyframes zoom{
+
+    from{
+
+        transform:scale(.9);
+
+        opacity:0;
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+    }
+
 }
 
 /* ===========================
@@ -270,38 +314,40 @@ footer p {
 
 @media(max-width:900px){
 
-    .headline h1{
+.gallery{
 
-        font-size:40px;
-    }
+grid-template-columns:repeat(3,1fr);
 
-    header{
+}
 
-        padding:0 24px;
-    }
+.headline h1{
 
-    main{
+font-size:40px;
 
-        padding:40px 20px;
-    }
+}
 
 }
 
 @media(max-width:600px){
 
-    .headline h1{
+.gallery{
 
-        font-size:30px;
-    }
+grid-template-columns:repeat(2,1fr);
 
-    .gallery{
+gap:14px;
 
-        grid-template-columns:repeat(2,1fr);
-    }
+}
 
-    .overlay-content{
+.headline h1{
 
-        padding:20px;
-    }
+font-size:30px;
+
+}
+
+header{
+
+padding:0 20px;
+
+}
 
 }
