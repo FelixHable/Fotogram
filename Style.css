@@ -202,7 +202,6 @@ display:block;
 }
 
 #overlayImage {
-    border-radius: 15px;
     width: 100%;
     flex: 1;
     min-height: 0;
