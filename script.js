@@ -13,6 +13,15 @@ const images = [
     { title: "Winter", src: "./img/winter.jpg" }
 ];
 
+
+const closeBtn = document.getElementById("closeBtn");
+const closeIcon = document.getElementById("closeIcon");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const prevArrow = document.getElementById("prevArrow");
+const nextArrow = document.getElementById("nextArrow");
+
+
 let currentImage = 0;
 let lastActiveElement = null;
 
@@ -127,13 +136,6 @@ document.getElementById("overlay").addEventListener("click", function(event){
     }
 });
 
-
-const closeBtn = document.getElementById("closeBtn");
-const closeIcon = document.getElementById("closeIcon");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const prevArrow = document.getElementById("prevArrow");
-const nextArrow = document.getElementById("nextArrow");
 
 closeBtn.addEventListener("mouseenter", () => closeIcon.src = "./img/close-hover.png");
 closeBtn.addEventListener("mouseleave", () => closeIcon.src = "./img/close.png");
