@@ -167,12 +167,15 @@ display:block;
     visibility:visible;
 }
 
-.overlay-content{
-    background:#09212A;
-    width:720px;
-    border-radius:20px;
-    padding:40px;
-    animation:zoom .25s ease;
+.overlay-content {
+    background: #09212A;
+    width: 720px;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 40px;
+    animation: zoom .25s ease;
 }
 
 .overlay-header {
@@ -198,14 +201,15 @@ display:block;
     color: #ff5d5d;
 }
 
-#overlayImage{
-    border-radius:15px;
-    width:100%;
-    max-height:520px;
-    object-fit:cover;
-    display:block;
-    margin:auto;
-    padding-bottom:20px;
+#overlayImage {
+    border-radius: 15px;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 .overlay-footer {
