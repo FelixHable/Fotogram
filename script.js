@@ -127,10 +127,17 @@ document.getElementById("overlay").addEventListener("click", function(event){
 });
 
 
-closeBtn.addEventListener("mouseenter", () => closeIcon.src = "./img/close-hover.png");
-closeBtn.addEventListener("mouseleave", () => closeIcon.src = "./img/close.png");
-closeBtn.addEventListener("mousedown", () => closeIcon.src = "./img/close-press.png");
-closeBtn.addEventListener("mouseup", () => closeIcon.src = "./img/close-hover.png");
+function addIconEffects(buttonEl, iconEl, baseName) {
+    if (!buttonEl || !iconEl) return;
+
+    buttonEl.addEventListener("mouseenter", () => iconEl.src = `./img/${baseName}-hover.png`);
+    buttonEl.addEventListener("mouseleave", () => iconEl.src = `./img/${baseName}.png`);
+    buttonEl.addEventListener("mousedown", () => iconEl.src = `./img/${baseName}-press.png`);
+    buttonEl.addEventListener("mouseup", () => iconEl.src = `./img/${baseName}-hover.png`);
+}
+
+addIconEffects(closeBtn, closeIcon, "close");
+
 
 function addArrowEffects(buttonEl, arrowEl) {
     buttonEl.addEventListener("mouseenter", () => arrowEl.src = "./img/arrow-hover.png");
