@@ -94,35 +94,30 @@ function changeImage(direction) {
     updateOverlay();
 }
 
-document.addEventListener("keydown", function(event){
+function handleKeyDown(event) {
     const overlay = document.getElementById("overlay");
-    
-    if(overlay.classList.contains("d-none")) return;
+    if (overlay.classList.contains("d-none")) return;
 
     if (event.key === "ArrowRight") changeImage(1);
     if (event.key === "ArrowLeft") changeImage(-1);
-    if(event.key === "Escape") closeOverlay();
+    if (event.key === "Escape") closeOverlay();
 
     if (event.key === "Tab") {
-        const focusableElements = overlay.querySelectorAll('button:not([disabled])');
-        const firstElement = focusableElements[0];
-        const lastElement = focusableElements[focusableElements.length - 1];
+        const focusable = overlay.querySelectorAll('button:not([disabled])');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
 
-        if (event.shiftKey) { 
-
-            if (document.activeElement === firstElement) {
-                lastElement.focus();
-                event.preventDefault();
-            }
-        } else { 
-
-            if (document.activeElement === lastElement) {
-                firstElement.focus();
-                event.preventDefault();
-            }
+        if (event.shiftKey && document.activeElement === first) {
+            last.focus();
+            event.preventDefault();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            first.focus();
+            event.preventDefault();
         }
     }
-});
+}
+
+document.addEventListener("keydown", handleKeyDown);
 
 
 document.getElementById("overlay").addEventListener("click", function(event){
