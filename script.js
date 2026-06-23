@@ -79,31 +79,28 @@ function updateOverlay() {
 }
 
 
-function nextImage() {
-    currentImage++;
+function changeImage(direction) {
+    currentImage += direction;
+
+    
     if (currentImage >= images.length) {
         currentImage = 0;
     }
-    updateOverlay();
-}
-
-
-function previousImage() {
-    currentImage--;
-    if (currentImage < 0) {
+    
+    else if (currentImage < 0) {
         currentImage = images.length - 1;
     }
+
     updateOverlay();
 }
-
 
 document.addEventListener("keydown", function(event){
     const overlay = document.getElementById("overlay");
     
     if(overlay.classList.contains("d-none")) return;
 
-    if(event.key === "ArrowRight") nextImage();
-    if(event.key === "ArrowLeft") previousImage();
+    if (event.key === "ArrowRight") changeImage(1);
+    if (event.key === "ArrowLeft") changeImage(-1);
     if(event.key === "Escape") closeOverlay();
 
     if (event.key === "Tab") {

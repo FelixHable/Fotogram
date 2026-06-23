@@ -48,13 +48,13 @@
             <img id="overlayImage" src="" alt="Expanded preview">
 
             <div class="overlay-footer">
-                <button id="prevBtn" class="icon-btn-left" onclick="previousImage()" aria-label="Previous Image">
+                <button id="prevBtn" class="icon-btn-left" onclick="changeImage(-1)" aria-label="Previous Image">
                     <img id="prevArrow" src="./img/arrow.png" alt="">
                 </button>
 
                 <span id="counter" aria-live="polite"></span>
 
-                <button id="nextBtn" class="icon-btn-right" onclick="nextImage()" aria-label="Next Image">
+                <button id="nextBtn" class="icon-btn-right" onclick="changeImage(1)" aria-label="Next Image">
                     <img id="nextArrow" src="./img/arrow.png" alt="">
                 </button>
             </div>
