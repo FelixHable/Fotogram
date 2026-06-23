@@ -39,8 +39,6 @@ function renderGallery() {
     });
 }
 
-renderGallery();
-
 
 function openOverlay(index) {
     lastActiveElement = document.activeElement; 
