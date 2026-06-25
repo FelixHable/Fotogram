@@ -1,254 +1,283 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Raleway", sans-serif;
-    background: #06171E;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  background: #06171e;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .no-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 header {
-    height: 96px;
-    background: #09212A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid rgba(255, 255, 255, .05);
+  height: 96px;
+  background: #09212a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 header .logo {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo img {
-    height: 46px;
+  height: 46px;
 }
 
 .logo p {
-    font-size: 30px;
-    font-weight: 700;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 main {
-    flex: 1;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 64px 32px;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 32px;
 }
 
 .headline {
-    text-align: center;
-    margin-bottom: 70px;
+  text-align: center;
+  margin-bottom: 70px;
 }
 
 .headline h1 {
-    font-size: 48px;
-    font-weight: 600;
-    letter-spacing: .5px;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 22px;
 }
 
 .gallery-item-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    aspect-ratio: 1;
-    border-radius: 14px;
-    display: block;
-    outline: none;
-    overflow: hidden;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  display: block;
+  outline: none;
+  overflow: hidden;
 }
 
 .gallery-item-btn:focus-visible {
-    outline: 3px solid #ff5d5d;
-    outline-offset: 4px;
+  outline: 3px solid #ff5d5d;
+  outline-offset: 4px;
 }
 
 .gallery-item-btn img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 14px;
-    transition: .25s;
-    display: block;
-    animation: fadeIn .5s ease both;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: 0.25s;
+  display: block;
+  animation: fadeIn 0.5s ease both;
 }
 
 .gallery-item-btn:hover img {
-    transform: scale(1.04);
-    filter: brightness(1.1);
-    box-shadow: 0 15px 30px rgba(0,0,0,.35);
+  transform: scale(1.04);
+  filter: brightness(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
 }
 
 footer {
-    display: flex;
-    background: #09212A;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 60px 24px 60px;
-    flex-direction: column;
-    gap: 12px;
-    border-top-left-radius: 50% 40px;
-    border-top-right-radius: 50% 40px;
+  display: flex;
+  background: #09212a;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px 24px 60px;
+  flex-direction: column;
+  gap: 12px;
+  border-top-left-radius: 50% 40px;
+  border-top-right-radius: 50% 40px;
 }
 
 .footer-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 footer img {
-    height: 34px;
+  height: 34px;
 }
 
 footer p {
-    color: #cfcfcf;
-    font-size: 13px;
+  color: #cfcfcf;
+  font-size: 13px;
 }
 
 .overlay {
-    position: fixed;
-    inset: 0;
-    backdrop-filter: blur(10px);
-    background: rgba(0,0,0,.72);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    transition: opacity .3s ease, visibility .3s ease;
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .overlay.d-none {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .overlay-content {
-    background: #09212A;
-    width: 90%;
-    max-width: 720px;
-    height: 80vh;
-    max-height: 680px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    padding: 40px;
-    animation: zoom .25s ease;
+  background: #09212a;
+  width: 90%;
+  max-width: 720px;
+  height: 80vh;
+  max-height: 680px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 40px;
+  animation: zoom 0.25s ease;
 }
 
 .overlay-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .overlay-header h2 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .overlay-header button {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 26px;
-    cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 .overlay-header button:hover {
-    color: #ff5d5d;
+  color: #ff5d5d;
 }
 
 #overlayImage {
-    width: 100%;
-    flex: 1;
-    min-height: 0;
-    object-fit: contain;
-    background: #041014;
-    border-radius: 15px;
-    display: block;
-    margin: auto;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  object-fit: contain;
+  background: #041014;
+  border-radius: 15px;
+  display: block;
+  margin: auto;
 }
 
 .overlay-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding-top: 20px;
 }
 
 #counter {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-.icon-btn-left, 
+.icon-btn-left,
 .icon-btn-right {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: .2s;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
 }
 
-.icon-btn-left img, 
+.icon-btn-left img,
 .icon-btn-right img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .icon-btn-left img {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 @keyframes zoom {
-    from { transform: scale(.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@media(max-width: 900px) {
-    .gallery { grid-template-columns: repeat(3, 1fr); }
-    .headline h1 { font-size: 40px; }
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .headline h1 {
+    font-size: 40px;
+  }
 }
 
-@media(max-width: 600px) {
-    .gallery { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .headline h1 { font-size: 30px; }
-    header { padding: 0 20px; }
-    .overlay-footer { gap: 16px; }
-    .overlay-content { padding: 24px; }
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .headline h1 {
+    font-size: 30px;
+  }
+  header {
+    padding: 0 20px;
+  }
+  .overlay-footer {
+    gap: 16px;
+  }
+  .overlay-content {
+    padding: 24px;
+  }
 }

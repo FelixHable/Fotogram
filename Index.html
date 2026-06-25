@@ -1,67 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Fotogram</title>
-    <link rel="icon" href="./img/fotogram.png">
-    <link rel="stylesheet" href="./Style.css">
-</head>
-<body onload="renderGallery()">
-
+    <link rel="icon" href="./img/fotogram.png" />
+    <link rel="stylesheet" href="./Style.css" />
+  </head>
+  <body onload="renderGallery()">
     <header>
-        <div class="logo">
-            <img src="./img/fotogram.png" alt="Fotogram Logo">
-            <p>Fotogram</p>
-        </div>
+      <div class="logo">
+        <img src="./img/fotogram.png" alt="Fotogram Logo" />
+        <p>Fotogram</p>
+      </div>
     </header>
 
     <main>
-        <section class="headline">
-            <h1>Your personal photo album</h1>
-        </section>
+      <section class="headline">
+        <h1>Your personal photo album</h1>
+      </section>
 
-        <section id="gallery" class="gallery" aria-label="Photo Gallery Container"></section>
+      <section
+        id="gallery"
+        class="gallery"
+        aria-label="Photo Gallery Container"
+      ></section>
     </main>
 
     <footer>
-        <div class="footer-left">
-            <img src="./img/Icon.png" alt="Developer Akademie Logo">
-            <span>Developer <br> Akademie</span>
-        </div>
-        <p>© 2023 Developer Akademie GmbH</p>
+      <div class="footer-left">
+        <img src="./img/Icon.png" alt="Developer Akademie Logo" />
+        <span
+          >Developer <br />
+          Akademie</span
+        >
+      </div>
+      <p>© 2023 Developer Akademie GmbH</p>
     </footer>
 
-    <div id="overlay" class="overlay d-none" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="imageTitle">
-        <div class="overlay-content">
-
-            <div class="overlay-header">
-                <h2 id="imageTitle">Image Title</h2>
-                <button id="closeBtn" class="icon-btn" onclick="closeOverlay()" aria-label="Close Lightbox View">
-                    <img id="closeIcon" src="./img/close.png" alt="">
-                </button>
-            </div>
-
-            <img id="overlayImage" src="" alt="Expanded preview">
-
-            <div class="overlay-footer">
-                <button id="prevBtn" class="icon-btn-left" onclick="changeImage(-1)" aria-label="Previous Image">
-                    <img id="prevArrow" src="./img/arrow.png" alt="">
-                </button>
-
-                <span id="counter" aria-live="polite"></span>
-
-                <button id="nextBtn" class="icon-btn-right" onclick="changeImage(1)" aria-label="Next Image">
-                    <img id="nextArrow" src="./img/arrow.png" alt="">
-                </button>
-            </div>
-
+    <div
+      id="overlay"
+      class="overlay d-none"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="imageTitle"
+    >
+      <div class="overlay-content">
+        <div class="overlay-header">
+          <h2 id="imageTitle">Image Title</h2>
+          <button
+            id="closeBtn"
+            class="icon-btn"
+            onclick="closeOverlay()"
+            aria-label="Close Lightbox View"
+          >
+            <img id="closeIcon" src="./img/close.png" alt="" />
+          </button>
         </div>
+
+        <img id="overlayImage" src="" alt="Expanded preview" />
+
+        <div class="overlay-footer">
+          <button
+            id="prevBtn"
+            class="icon-btn-left"
+            onclick="changeImage(-1)"
+            aria-label="Previous Image"
+          >
+            <img id="prevArrow" src="./img/arrow.png" alt="" />
+          </button>
+
+          <span id="counter" aria-live="polite"></span>
+
+          <button
+            id="nextBtn"
+            class="icon-btn-right"
+            onclick="changeImage(1)"
+            aria-label="Next Image"
+          >
+            <img id="nextArrow" src="./img/arrow.png" alt="" />
+          </button>
+        </div>
+      </div>
     </div>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
